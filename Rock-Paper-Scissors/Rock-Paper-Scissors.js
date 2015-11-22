@@ -1,4 +1,4 @@
-Tasks = new Mongo.Collection("entries");
+Tasks = new Mongo.Collection("entries9");
  
 Router.route('/', function () {
   this.render('task');
@@ -13,15 +13,15 @@ if (Meteor.isClient) {
   
   Template.player1.helpers({
 	text: function(){
-		p1 = Tasks.find({player: 1}).fetch()[0].choice;
-		p2 = Tasks.find({player: 2}).fetch()[0].choice;
-		console.log(p1);
-		console.log(p2);
-		if((typeof p1 === 'undefined') || p1 == "none") {
+		p1 = Tasks.find({player: 1}).fetch()[0];
+		p2 = Tasks.find({player: 2}).fetch()[0];
+		if((typeof p1 === 'undefined') || p1.choice == "none") {
 			return 'Click your choice';
-		} else if((typeof p2 === 'undefined') || p2 == "none"){
+		} else if((typeof p2 === 'undefined') || p2.choice == "none"){
 		   	return "waiting for player2";
 		} else {
+			p1 = p1.choice;
+			p2 = p2.choice;
 			out1 = "you win!";
 			out2 = "you lose!";
 			if(p1 == "rock" && p2 == "paper") {
@@ -78,15 +78,15 @@ if (Meteor.isClient) {
   
   Template.player2.helpers({
 	text: function(){
-		p1 = Tasks.find({player: 1}).fetch()[0].choice;
-		p2 = Tasks.find({player: 2}).fetch()[0].choice;
-		console.log(p1);
-		console.log(p2);
-		if((typeof p2 === 'undefined') || p2 == "none") {
+		p1 = Tasks.find({player: 1}).fetch()[0];
+		p2 = Tasks.find({player: 2}).fetch()[0];
+		if((typeof p2 === 'undefined') || p2.choice == "none") {
 			return 'Click your choice';
-		} else if((typeof p1 === 'undefined') || p1 == "none"){
+		} else if((typeof p1 === 'undefined') || p1.choice == "none"){
 		   	return "waiting for player1";
 		} else {
+			p1 = p1.choice;
+			p2 = p2.choice;
 			out2 = "you win!";
 			out1 = "you lose!";
 			if(p1 == "rock" && p2 == "paper") {
@@ -143,20 +143,16 @@ if (Meteor.isClient) {
  
   Template.player1.events({
     "click .hide-completed": function (event) {
-		if(Tasks.find({player: 1}).count() == 0) {
+	if(Tasks.find({player: 1}).count() == 0) {
 		Tasks.insert({
 		player: 1,
-		choice: "none",
+		choice: event.target.innerHTML,
         createdAt: new Date() // current time
         });
 	} else {
 		Tasks.update(Tasks.find({player: 1}).fetch()[0]._id, {
         $set: {choice: event.target.innerHTML}
       });
-	  p1 = Tasks.find({player: 1}).fetch()[0].choice;
-		p2 = Tasks.find({player: 2}).fetch()[0].choice;
-		console.log(p2);
-		console.log(p1);
 	  }
 	},
 	"click .resetScore": function (event) {
@@ -175,17 +171,13 @@ if (Meteor.isClient) {
 	if(Tasks.find({player: 2}).count() == 0) {
 		Tasks.insert({
 		player: 2,
-		choice: "none",
+		choice: event.target.innerHTML,
         createdAt: new Date() // current time
         });
 	} else {
 		 Tasks.update(Tasks.find({player: 2}).fetch()[0]._id, {
         $set: {choice: event.target.innerHTML}
       });
-	  p1 = Tasks.find({player: 1}).fetch()[0].choice;
-		p2 = Tasks.find({player: 2}).fetch()[0].choice;
-		console.log(p1);
-		console.log(p2);
 	  }
 	},
 	"click .resetScore": function (event) {
