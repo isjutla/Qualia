@@ -1,44 +1,45 @@
 <head>
-  <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors</title>
 </head>
- 
+
 <template name="home">
-  <div class="container">
-    <header>
-      <h1>Rock Paper Scissors</h1>
-	  <h1>Go to /player1 or /player2</h1>
-    </header>
-  </div>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+
+            <h1>Go to /player1 or /player2</h1>
+        </header>
+    </div>
 </template>
- 
+
 <template name="player1">
-  <div class="container">
-    <header>
-      <h1>Rock Paper Scissors</h1>
-    </header>
-  </div>
-  <div class="rpcButtons">
-  <h1>{{text}}</h1>
-  <button class="{{color1}}" type="button" onclick="{{hideCompleted}}">rock</button>
-   <button class="{{color2}}" type="button" onclick="{{hideCompleted}}">paper</button>
-   <button class="{{color3}}" type="button" onclick="{{hideCompleted}}">scissors</button>
-   <button class="resetScore" type="button">reset</button>
-   
-  </div>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+    </div>
+    <div class="rpcButtons">
+        <h1>{{text}}</h1>
+        <button class="{{color1}}" type="button" onclick="{{hideCompleted}}">rock</button>
+        <button class="{{color2}}" type="button" onclick="{{hideCompleted}}">paper</button>
+        <button class="{{color3}}" type="button" onclick="{{hideCompleted}}">scissors</button>
+        <button class="resetScore" type="button">reset</button>
+
+    </div>
 </template>
 
 <template name="player2">
-  <div class="container">
-    <header>
-      <h1>Rock Paper Scissors</h1>
-    </header>
-  </div>
-  <div class="rpcButtons">
-  <h1>{{text}}</h1>
-  <button class="{{color1}}" type="button" onclick="{{hideCompleted}}">rock</button>
-   <button class="{{color2}}" type="button" onclick="{{hideCompleted}}">paper</button>
-   <button class="{{color3}}" type="button" onclick="{{hideCompleted}}">scissors</button>
-   <button class="resetScore" type="button">reset</button>
-  </div>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+    </div>
+    <div class="rpcButtons">
+        <h1>{{text}}</h1>
+        <button class="{{color1}}" type="button" onclick="{{hideCompleted}}">rock</button>
+        <button class="{{color2}}" type="button" onclick="{{hideCompleted}}">paper</button>
+        <button class="{{color3}}" type="button" onclick="{{hideCompleted}}">scissors</button>
+        <button class="resetScore" type="button">reset</button>
+    </div>
 </template>
 
