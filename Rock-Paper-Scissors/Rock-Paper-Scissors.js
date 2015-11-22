@@ -1,7 +1,7 @@
 Tasks = new Mongo.Collection("entries9");
  
 Router.route('/', function () {
-  this.render('task');
+  this.render('home');
 });
 
 Router.route('/player1');
