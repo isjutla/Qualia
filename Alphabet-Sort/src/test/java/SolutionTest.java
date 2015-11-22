@@ -7,9 +7,6 @@ import java.util.List;
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by indie on 11/22/2015.
- */
 
 
 public class SolutionTest {
@@ -45,6 +42,28 @@ public class SolutionTest {
     }
 
     @Test
+    public void radix3EqualLength() {
+        String order = "abc";
+        List<String> ina = new ArrayList<String>();
+        ina.add("aac");
+        ina.add("baa");
+        ina.add("bab");
+        ina.add("aaa");
+        ina.add("aab");
+
+
+        List<String> answer = Solution.order(ina, order);
+        assertEquals(5, answer.size()); //correct: [aaa, aab, aac, baa, bac]
+        //ideally would check the whole list
+        //String[] expected = new String[]{"" , "aa", "aaa","abc", "b", "c", "cba", "cc"};
+        //List<String> expectedList = Arrays.asList(expected);
+        assertEquals("aaa", answer.get(0));
+        assertEquals("aac", answer.get(2));
+        assertEquals("bab", answer.get(4));
+    }
+
+
+    @Test
     public void radix3ReversedFewEntries() {
         String order = "cba";
         List<String> ina = new ArrayList<String>();
@@ -57,8 +76,8 @@ public class SolutionTest {
         ina.add("b");
         ina.add("");
         List<String> answer = Solution.order(ina, order);
+
         assertEquals(8, answer.size()); //correct: [ ,c, cc, cba, b, abc, aa, aaa]
-        System.out.println(answer);
         assertEquals("", answer.get(0));
         assertEquals("cc", answer.get(2));
         assertEquals("aaa", answer.get(7));
@@ -77,10 +96,8 @@ public class SolutionTest {
         ina.add("b");
         ina.add("");
         List<String> answer = Solution.order(ina, order);
+
         assertEquals(8, answer.size()); //correct: [ , aa, aaa,abc, b, c, cba, cc]
-        //ideally would check the whole list
-        //String[] expected = new String[]{"" , "aa", "aaa","abc", "b", "c", "cba", "cc"};
-        //List<String> expectedList = Arrays.asList(expected);
         assertEquals("", answer.get(0));
         assertEquals("aaa", answer.get(2));
         assertEquals("cc", answer.get(7));

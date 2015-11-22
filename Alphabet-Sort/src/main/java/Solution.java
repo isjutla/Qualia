@@ -4,8 +4,20 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+/**
+ *
+ *
+ * Author: Inderjit Jutla
+ * Date: 2015-11-22
+ */
 public class Solution {
 
+    /**
+     *
+     * @param words is the list of words to sort in order
+     * @param order describes the lexographic ordering required
+     * @return
+     */
     public static List<String> order(List<String> words, String order) {
         Map<Character, Integer> radix = new HashMap<Character, Integer>();
         for(int i = 0; i < order.length(); i++) {
