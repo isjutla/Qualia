@@ -5,7 +5,13 @@ import java.math.*;
 import java.util.regex.*;
 
 /**
- *
+ * Runtime: O(k*n) where k is the maximum size of a word
+ * and n is the length of the list. The while loop will
+ * iterate about k times. Each iteration of the while loop
+ * does a constant number of operations that are at most O(n).
+ * (List.get, List.add, and HashMap.get are all O(1) and are done
+ * for each element of the list). bucketToList also process at most
+ * n values. Thus the total runtime is O(k*n)
  *
  * Author: Inderjit Jutla
  * Date: 2015-11-22
@@ -16,7 +22,7 @@ public class Solution {
      *
      * @param words is the list of words to sort in order
      * @param order describes the lexographic ordering required
-     * @return
+     * @return the ordered version of words
      */
     public static List<String> order(List<String> words, String order) {
         Map<Character, Integer> radix = new HashMap<Character, Integer>();
