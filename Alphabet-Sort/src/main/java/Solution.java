@@ -6,32 +6,23 @@ import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        Map<String, Integer> radix = new HashMap<String, Integer>();
-        radix.put("a", 1);
-        radix.put("b",2);
-        radix.put("c", 3);
-        List<String> ina = new ArrayList<String>();
-        ina.add("abc");
-        ina.add("c");
-        ina.add("aaa");
-        ina.add("cc");
-        ina.add("cba");
-        ina.add("aa");
-        ina.add("b");
-        ina.add("");
-        List<List<String>> buck;
-        System.out.println("nothing");
-        boolean done = false;
-        int pos = 2;
+    public static List<String> order(List<String> words, String order) {
+        Map<Character, Integer> radix = new HashMap<Character, Integer>();
+        for(int i = 0; i < order.length(); i++) {
+            radix.put(order.charAt(i), i + 1);
+        }
+        int pos = 0;
+        for(String word: words) {
+            if(word.length() - 1 > pos) {
+                pos = word.length() - 1;
+            }
+        }
         while(pos >= 0) {
-            done = true;
-            buck = new ArrayList<List<String>>(26);
-            initBuck(buck, 26);
-            for(String a: ina){
+            List<List<String>> buck = new ArrayList<List<String>>();
+            initBuck(buck, radix.size() + 1);
+            for(String a: words){
                 if(a.length() >= pos+1) {
-                    done = false;
-                    int r = radix.get(Character.toString(a.charAt(pos)));
+                    int r = radix.get(a.charAt(pos));
                     List<String> rad = buck.get(r);
                     rad.add(a);
                 } else {
@@ -39,11 +30,10 @@ public class Solution {
                     rad.add(a);
                 }
             }
-            System.out.println(ina);
             pos = pos - 1;
-            ina = bucketToList(buck);
+            words = bucketToList(buck);
         }
-        System.out.println(ina);
+        return(words);
 
     }
 
