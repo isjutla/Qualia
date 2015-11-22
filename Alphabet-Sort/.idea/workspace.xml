@@ -37,12 +37,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4025501">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.6193078">
+              <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#915#935#0" expanded="true" />
-                <element signature="e#1285#1299#0" expanded="true" />
                 <element signature="e#2097#2105#0" expanded="true" />
               </folding>
             </state>
@@ -53,15 +52,15 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/SolutionTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#339#347#0" expanded="true" />
                 <element signature="e#573#581#0" expanded="true" />
                 <element signature="e#1361#1369#0" expanded="true" />
-                <element signature="e#2094#2102#0" expanded="true" />
-                <element signature="e#2707#2715#0" expanded="true" />
-                <element signature="e#3329#3337#0" expanded="true" />
+                <element signature="e#1894#1902#0" expanded="true" />
+                <element signature="e#2507#2515#0" expanded="true" />
+                <element signature="e#3129#3137#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +84,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/SolutionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Solution.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SolutionTest.java" />
       </list>
     </option>
   </component>
@@ -771,7 +770,7 @@
       <created>1448230426115</created>
       <option name="number" value="Default" />
       <updated>1448230426115</updated>
-      <workItem from="1448230427804" duration="4360000" />
+      <workItem from="1448230427804" duration="5018000" />
     </task>
     <servers />
   </component>
@@ -808,7 +807,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4360000" />
+    <option name="totallyTimeSpent" value="5018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -847,7 +846,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/SolutionTest.java</url>
-          <line>59</line>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -872,27 +871,26 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/SolutionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#339#347#0" expanded="true" />
             <element signature="e#573#581#0" expanded="true" />
             <element signature="e#1361#1369#0" expanded="true" />
-            <element signature="e#2094#2102#0" expanded="true" />
-            <element signature="e#2707#2715#0" expanded="true" />
-            <element signature="e#3329#3337#0" expanded="true" />
+            <element signature="e#1894#1902#0" expanded="true" />
+            <element signature="e#2507#2515#0" expanded="true" />
+            <element signature="e#3129#3137#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4025501">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.6193078">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#915#935#0" expanded="true" />
-            <element signature="e#1285#1299#0" expanded="true" />
             <element signature="e#2097#2105#0" expanded="true" />
           </folding>
         </state>

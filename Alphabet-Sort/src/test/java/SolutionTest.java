@@ -50,13 +50,9 @@ public class SolutionTest {
         ina.add("bab");
         ina.add("aaa");
         ina.add("aab");
-
-
         List<String> answer = Solution.order(ina, order);
+
         assertEquals(5, answer.size()); //correct: [aaa, aab, aac, baa, bac]
-        //ideally would check the whole list
-        //String[] expected = new String[]{"" , "aa", "aaa","abc", "b", "c", "cba", "cc"};
-        //List<String> expectedList = Arrays.asList(expected);
         assertEquals("aaa", answer.get(0));
         assertEquals("aac", answer.get(2));
         assertEquals("bab", answer.get(4));
